@@ -11,3 +11,14 @@ class CarbonCalculator:
         electricity_consumption_kwh = electricity_consumption_gj * 1000 * self.GJ_TO_KWH
         co2_electricity = electricity_consumption_kwh * self.Emission_Electricity
         return co2_electricity
+  
+  def gas(self, gas_consumption_gj):
+        gas_consumption_kwh = gas_consumption_gj * 1000 * self.GJ_TO_KWH
+        co2_gas = gas_consumption_kwh * self.Emission_Gas
+        return co2_gas
+    
+  def fuel(self, fuel_consumption_gj):
+        fuel_consumption_kwh = fuel_consumption_gj * 1000 * self.GJ_TO_KWH
+        fuel_consumption_liters = fuel_consumption_kwh / 9.0
+        co2_fuel = fuel_consumption_liters * self.Emission_Fuel
+        return co2_fuel
