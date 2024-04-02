@@ -32,3 +32,15 @@ class CarbonCalculator:
         fuel_consumed_liters = (total_km_traveled / 100) * fuel_per_100
         co2_business_travel = fuel_consumed_liters * self.Emission_Fuel
         return co2_business_travel
+  
+  def total_emissions(self, electricity_consumption_gj, gas_consumption_gj, fuel_consumption_gj, 
+                                      total_waste_tons, recycling_rate, total_km_traveled, 
+                                      fuel_per_100):
+        electricity = self.electricity(electricity_consumption_gj)
+        gas = self.gas(gas_consumption_gj)
+        fuel = self.fuel(fuel_consumption_gj)
+        waste = self.waste(total_waste_tons, recycling_rate)
+        business_travel = self.travel(total_km_traveled, fuel_per_100)
+        
+        total_co2_emissions = (electricity + gas + fuel + waste + business_travel)
+        return total_co2_emissions
