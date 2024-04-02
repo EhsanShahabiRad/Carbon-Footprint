@@ -22,3 +22,13 @@ class CarbonCalculator:
         fuel_consumption_liters = fuel_consumption_kwh / 9.0
         co2_fuel = fuel_consumption_liters * self.Emission_Fuel
         return co2_fuel
+  
+  def waste(self, total_waste_tons, recycling_rate):
+        total_waste_kg = total_waste_tons * 1000  
+        co2_waste = total_waste_kg * (0.057 - recycling_rate * 0.057) 
+        return co2_waste
+    
+  def travel(self, total_km_traveled, fuel_per_100):
+        fuel_consumed_liters = (total_km_traveled / 100) * fuel_per_100
+        co2_business_travel = fuel_consumed_liters * self.Emission_Fuel
+        return co2_business_travel
