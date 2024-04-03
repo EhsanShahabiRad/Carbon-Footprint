@@ -44,3 +44,28 @@ class CarbonCalculator:
         
         total_co2_emissions = (electricity + gas + fuel + waste + business_travel)
         return total_co2_emissions
+  
+
+      # def __init__(self, Emission_Factor_Short=0.15, Emission_Factor_Long=0.18, Emission_Factor_Business_Class_Multiplier=1.26, Emission_Factor_First_Class_Multiplier=2.4):
+      #   self.Emission_Factor_Short = Emission_Factor_Short  
+      #   self.Emission_Factor_Long = Emission_Factor_Long 
+      #   self.Emission_Factor_Business_Class_Multiplier = Emission_Factor_Business_Class_Multiplier
+      #   self.Emission_Factor_First_Class_Multiplier = Emission_Factor_First_Class_Multiplier  
+
+      # def air_travel(self, total_km_flown, flight_type='short', class_type='economy'):
+        
+      #   if flight_type == 'short':
+      #       emission_factor = self.Emission_Factor_Short
+      #   else:  
+      #       emission_factor = self.Emission_Factor_Long
+
+       
+      #   if class_type == 'business':
+      #       emission_factor *= self.Emission_Factor_Business_Class_Multiplier
+      #   elif class_type == 'first':
+      #       emission_factor *= self.Emission_Factor_First_Class_Multiplier
+
+       
+      #   co2_emissions = total_km_flown * emission_factor
+
+      #   return co2_emissions
